@@ -73,12 +73,12 @@ Represents an individual bank account with information about its owner, balance,
 ### 💰 `Transaction` Class — Design Overview
 
 **Purpose:**  
-Represents a financial action (deposit, withdrawal, or transfer) linked to an account.
+Represents a financial action (deposit, withdrawal, or transfer(coming soon)) linked to an account.
 
 **Conceptual Responsibilities:**
 - Record the details of a single transaction.
-- Track the type, amount, and resulting balance.
-- Provide a historical audit trail for each account.
+- Track the type, amount, and new balance.
+- Provide a ledger for all accounts.
 
 **Attributes (fields):**
 | Field | Type | Description |
@@ -88,12 +88,12 @@ Represents a financial action (deposit, withdrawal, or transfer) linked to an ac
 | `type` | Enum | Transaction type (DEPOSIT, WITHDRAWAL, TRANSFER) |
 | `amount` | double | Transaction amount |
 | `timestamp` | LocalDateTime | When the transaction occurred |
-| `balanceAfterTransaction` | double | Account balance after the transaction |
+| `newBalance` | double | Account balance after the transaction |
 
 **Behaviors (methods to plan):**
 - Constructor for initializing transaction data.
 - `toString()` for clean display in transaction history.
-- (Optional) Validation to prevent invalid amounts or missing account references.
+- (Later Update) Validation to prevent invalid amounts or missing account references.
 
 **Design Notes:**
 - Consider using an **enum** for transaction type to avoid string errors.
@@ -110,8 +110,8 @@ Represents a financial action (deposit, withdrawal, or transfer) linked to an ac
 
 ### Phase 2 — Core Model Design
 - [x] Define `Account` class (fields, behaviors, relationships)
-- [ ] Define `Transaction` class (fields, relationships)
-- [ ] Document model relationships in `README.md`
+- [x] Define `Transaction` class (fields, relationships)
+- [x] Document model relationships in `README.md`
 
 ---
 
